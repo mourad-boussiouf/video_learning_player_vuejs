@@ -8,8 +8,12 @@
   </v-container>
 </template>
 
+<Home></Home>
+
 <script>
+
 import VideoPlayer from "./components/VideoPlayer";
+
 
 export default {
   name: "App",
@@ -26,6 +30,8 @@ export default {
     },
   },
 };
+
+
 </script>
 
 <style>
