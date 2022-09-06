@@ -374,7 +374,7 @@ export default {
   height: 0.9375rem;
   border-radius: 13px;
   position: absolute;
-  background-color: #fff;
+  background-color: dodgerblue;
   border: 0.125rem solid #222;
   left: -7px;
 }
