@@ -1,10 +1,12 @@
 <template>
+
   <div
     class="video__container"
     @click="toggleVideoPlay"
     @mouseover="handleShowFunctions"
     @mouseleave="setTimeoutFunction"
   >
+
     <div class="spinner" v-if="spinner">
       <v-progress-circular indeterminate color="var(--primary-color)"></v-progress-circular>
     </div>
@@ -50,6 +52,8 @@
           <div class="video__controls__duration">
             <span>{{ currentTimeFormatted }}</span>/
             <span>{{ durationFormatted }}</span>
+
+
           </div>
         </div>
         <div class="video__controls__configs">
@@ -120,6 +124,7 @@
       </div>
     </div>
   </div>
+
 </template>
 
 <script>
@@ -246,6 +251,8 @@ export default {
           }
           this.currentTime = this.duration * (drag / track.offsetWidth);
           this.$refs.videoPlayer.currentTime = this.currentTime;
+          window.ownerDocument.defaultView.console.log(this.currentTime);
+          console.log(this.currentTime);
         }
       }
     },
@@ -274,6 +281,7 @@ export default {
     },
   },
 };
+
 </script>
 
 <style>

@@ -1,6 +1,8 @@
+
 <template>
   <v-container>
     <v-row justify="center">
+      <button @click="testLog">CONSOLELOG</button>
       <v-col md="6">
         <video-player :videoURL="videoURL" />
       </v-col>
@@ -8,7 +10,7 @@
   </v-container>
 </template>
 
-<Home></Home>
+
 
 <script>
 
@@ -30,6 +32,7 @@ export default {
     },
   },
 };
+
 
 
 </script>
