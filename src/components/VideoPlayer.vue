@@ -7,6 +7,7 @@
     @mouseleave="setTimeoutFunction"
   >
 
+
     <div class="spinner" v-if="spinner">
       <v-progress-circular indeterminate color="var(--primary-color)"></v-progress-circular>
     </div>
@@ -236,6 +237,7 @@ export default {
         this.$refs.videoPlayerProgress.offsetWidth;
       this.currentTime = currentTime;
       this.$refs.videoPlayer.currentTime = currentTime;
+      console.log(this.$refs.videoPlayer.currentTime);
     },
     handleTrackOnDrag(event) {
       if (event.x !== 0 && event.y !== 0) {
@@ -251,8 +253,6 @@ export default {
           }
           this.currentTime = this.duration * (drag / track.offsetWidth);
           this.$refs.videoPlayer.currentTime = this.currentTime;
-          window.ownerDocument.defaultView.console.log(this.currentTime);
-          console.log(this.currentTime);
         }
       }
     },

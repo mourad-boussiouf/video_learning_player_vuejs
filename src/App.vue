@@ -1,20 +1,20 @@
-
 <template>
   <v-container>
     <v-row justify="center">
-      <button @click="testLog">CONSOLELOG</button>
-      <v-col md="6">
-        <video-player :videoURL="videoURL" />
-      </v-col>
+        <button @click="testLog">CONSOLELOG</button>
+          <v-col md="6">
+            <video-player :videoURL="videoURL" />
+        </v-col>
     </v-row>
   </v-container>
 </template>
 
 
 
-<script>
 
+<script>
 import VideoPlayer from "./components/VideoPlayer";
+
 
 
 export default {
@@ -30,6 +30,9 @@ export default {
     changeVideoPlaying(url) {
       this.videoURL = url;
     },
+    testLog() {
+      console.log(VideoPlayer.data);
+    }
   },
 };
 
