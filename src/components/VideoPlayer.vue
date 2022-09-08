@@ -124,11 +124,14 @@
         </div>
       </div>
     </div>
+    <h3>louis</h3>
   </div>
 
 </template>
 
 <script>
+import VideoPlayer from "@/components/Home";
+
 export default {
   name: "VideoPlayer",
   props: {
@@ -183,6 +186,9 @@ export default {
         this.isPlaying = false;
         this.$refs.videoPlayer.pause();
       }
+    },
+    testLog() {
+      console.log(VideoPlayer.data);
     },
     handleVolumeClick(event) {
       const volume = this.$refs.videoVolumeTrack;

@@ -3,7 +3,7 @@
     <v-row justify="center">
         <button @click="testLog">CONSOLELOG</button>
           <v-col md="6">
-            <home></home>
+            <video-player :videoURL="videoURL" />
         </v-col>
     </v-row>
   </v-container>
@@ -14,14 +14,14 @@
 
 
 <script>
-import Home from "./components/Home";
+import VideoPlayer from "./components/VideoPlayer";
 
 
 
 export default {
   name: "App",
   components: {
-    Home,
+    VideoPlayer,
   },
   data: () => ({
     videoURL:
@@ -31,6 +31,9 @@ export default {
     changeVideoPlaying(url) {
       this.videoURL = url;
     },
+      testLog() {
+      console.log(VideoPlayer.data);
+    }
   },
 };
 
