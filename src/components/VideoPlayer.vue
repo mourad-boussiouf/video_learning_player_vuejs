@@ -1,5 +1,4 @@
 <template>
-
   <div
     class="video__container"
     @click="toggleVideoPlay"
@@ -120,17 +119,16 @@
                 :class="{ active: !!(speed === '0.5x') }"
               >0.5x</div>
             </div>
+            <p>louis</p>
           </div>
         </div>
       </div>
     </div>
-    <h3>louis</h3>
   </div>
-
 </template>
 
 <script>
-import VideoPlayer from "@/components/Home";
+import VideoPlayer from "@/components/VideoPlayer";
 
 export default {
   name: "VideoPlayer",
@@ -138,6 +136,9 @@ export default {
     videoURL: {
       type: String,
       required: true,
+    },
+    selectedTime: {
+      type: String,
     },
   },
   data: () => ({
@@ -187,9 +188,12 @@ export default {
         this.$refs.videoPlayer.pause();
       }
     },
+
     testLog() {
       console.log(VideoPlayer.data);
     },
+
+
     handleVolumeClick(event) {
       const volume = this.$refs.videoVolumeTrack;
       const currentVolume =
@@ -209,6 +213,7 @@ export default {
       }
     },
     updateVideoDetails() {
+
       if (this.$refs.videoPlayer) {
         if (!Number.isNaN(this.$refs.videoPlayer.duration)) {
           this.duration = this.$refs.videoPlayer.duration;
@@ -244,6 +249,9 @@ export default {
       this.currentTime = currentTime;
       this.$refs.videoPlayer.currentTime = currentTime;
       console.log(this.$refs.videoPlayer.currentTime);
+    },
+    ChangeCurrentTime(time) {
+      this.$refs.videoPlayer.currentTime = time;
     },
     handleTrackOnDrag(event) {
       if (event.x !== 0 && event.y !== 0) {

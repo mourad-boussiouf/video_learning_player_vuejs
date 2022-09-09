@@ -1,21 +1,14 @@
 <template>
-  <v-container>
-    <v-row justify="center">
-        <button @click="testLog">CONSOLELOG</button>
-          <v-col md="6">
-            <video-player :videoURL="videoURL" />
-        </v-col>
-    </v-row>
-  </v-container>
+<Home></Home>
 </template>
 
 <script>
-import VideoPlayer from "./components/VideoPlayer";
+import Home from "./components/Home";
 
 export default {
   name: "App",
   components: {
-    VideoPlayer,
+    Home,
   },
   data: () => ({
     videoURL:
@@ -26,14 +19,11 @@ export default {
       this.videoURL = url;
     },
       testLog() {
-      console.log(VideoPlayer.data);
-      console.log(this.VideoPlayer.currentTime);
-      console.log(this.currentTime);
+console.log('lol');
     }
   },
 };
 </script>
-
 <style>
 body {
   font-family: Roboto;
