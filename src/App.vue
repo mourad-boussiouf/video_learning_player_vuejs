@@ -7,16 +7,10 @@
         </v-col>
     </v-row>
   </v-container>
-
 </template>
-
-
-
 
 <script>
 import VideoPlayer from "./components/VideoPlayer";
-
-
 
 export default {
   name: "App",
@@ -33,12 +27,11 @@ export default {
     },
       testLog() {
       console.log(VideoPlayer.data);
+      console.log(this.VideoPlayer.currentTime);
+      console.log(this.currentTime);
     }
   },
 };
-
-
-
 </script>
 
 <style>
