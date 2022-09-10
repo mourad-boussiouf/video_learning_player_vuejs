@@ -4,6 +4,14 @@
     <div class="feature-card">
         <img src="https://image.posterlounge.fr/img/products/610000/609410/609410_poster_l.jpg" alt ="KillBill movie poster">
           <h3>LOLILOL</h3>
+      <v-btn
+        elevation="2"
+        large
+      ></v-btn>
+      <v-btn
+        elevation="2"
+        large
+      ></v-btn>
         </div>
     </div>
       <v-row justify="center">
