@@ -7,11 +7,11 @@
       <v-btn
         elevation="2"
         large
-      ></v-btn>
+      >CHAPITRE 1</v-btn>
       <v-btn
         elevation="2"
         large
-      ></v-btn>
+      >CHAPITRE 2</v-btn>
         </div>
     </div>
       <v-row justify="center">
